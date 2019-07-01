@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+.login{
+    display: flex;
+    justify-content: center;
+}
+.form-group input{
+    margin-top: 10px;
+}
+footer{
+    display: none
+}
+</style>
+<div class="container login">
+    
+    <form class="form-group w-50 mt-5" action="" method="POST">
+       
+        {% comment %} {{form}} {% endcomment %}
+  
+        {% csrf_token %}
+        {{form.as.p}}
+              <input type="submit"  class="form-control btn btn-info mt-3" value='Log In'>
+    </form>
+
+</div>
+   
+{% endblock content %}

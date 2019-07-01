@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<style>footer{
+display: none
+}
+input{
+    margin:1rem 0 1rem 0
+}
+
+</style>
+    <div class="container mt-5 w-50 signup">
+
+        <form action="" class="form-group"method="post">
+          <!-- <input type="text" name="user" id="" class="form-control" placeholder="Enter your username" aria-describedby="helpId">
+          <input type="text" name="user" id="" class="form-control" placeholder="Enter your password" aria-describedby="helpId">
+           -->
+           {{form}}
+         <input type="submit" value="Create user" class="btn btn-info text-center mx-auto w-100">
+        </form>
+    </div>
+{% endblock content %}

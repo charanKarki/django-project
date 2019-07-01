@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+            <h1 class="text-light bg-info " style="font-weight:400">BLOG POSTS</h1>
+            {% for post in posts %}
+        
+           
+          
+            <div class="jumbotron ">
+                <h1 class="display-4 text-info" style="font-size: 30px;display:inline;text-transform:capitalize">{{ post.title}}</h1>
+                <p class="lead  ml-5" style="display:inline">author : {{post.author.username}}</p> <p class="text-primary"style="margin:1rem 0 .5rem 0">{{post.date_posted}}</p>
+        
+                <hr class="my-2">
+                <p>{{post.content}}</p>
+         </div>
+         
+          
+           
+            {% endfor %}
+        
+        </div>
+        <div class="col-md-4 " >
+            <div class="jumbotron">
+                <h1 class="display-4">Create posts</h1>
+                <p class="lead">post text</p>
+                <hr class="my-2">
+                <p>More info</p>
+                <p class="lead">
+                    <a class="btn btn-primary btn-lg" href="" role="button">create</a>
+                </p>
+            </div>
+        </div>
+    </div>
+  
+ 
+    
+    
+   
+{% endblock content %}
